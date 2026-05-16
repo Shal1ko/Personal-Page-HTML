@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggie Market</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1b4332, #2d6a4f);
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #b7efc5;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b7efc5;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #d8f3dc;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 40px 60px 80px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h2 {
+            margin-bottom: 10px;
+            color: #b7efc5;
+        }
+
+        .product-info p {
+            color: #e9f5ec;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            background: #52b788;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #40916c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #d8f3dc;
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .products {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">VeggieMart</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Fresh Picks</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <h1>Fresh Produce Market</h1>
+        <p>Locally sourced vegetables and fruits delivered fresh.</p>
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section class="products">
+
+        <!-- PEPPERS -->
+
+        <div class="product-card">
+
+            <img src="21b1da743dc45974de36d04c021fd8eee1276091cdd1e0e2387cd6d193a8ec3f.webp" alt="Peppers">
+
+            <div class="product-info">
+
+                <h2>Peppers</h2>
+
+                <p>
+                    Bright colorful peppers perfect for salads,
+                    stir fry, and fresh snacks.
+                </p>
+
+                <div class="price">$4.20 / kg</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CARROTS -->
+
+        <div class="product-card">
+
+            <img src="crop_CARR1923_Carrot___Sweetness_Pelleted_Long.webp" alt="Carrots">
+
+            <div class="product-info">
+
+                <h2>Carrots</h2>
+
+                <p>
+                    Sweet crunchy carrots packed with vitamins
+                    and harvested fresh daily.
+                </p>
+
+                <div class="price">$2.80 / kg</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- POTATOES -->
+
+        <div class="product-card">
+
+            <img src="Patates.jpg" alt="Potatoes">
+
+            <div class="product-info">
+
+                <h2>Potatoes</h2>
+
+                <p>
+                    Fresh farm potatoes ideal for fries,
+                    mashed potatoes, and roasting.
+                </p>
+
+                <div class="price">$1.90 / kg</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- RADISHES -->
+
+        <div class="product-card">
+
+            <img src="Radish-Champion_6b2e14ab-3ed6-44c1-93d1-89108db0479f.webp" alt="Radishes">
+
+            <div class="product-info">
+
+                <h2>Radishes</h2>
+
+                <p>
+                    Crisp spicy radishes that add flavor
+                    and crunch to any dish.
+                </p>
+
+                <div class="price">$3.40 / kg</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- LEEKS -->
+
+        <div class="product-card">
+
+            <img src="Leek_on_white_background_-_0947.jpg" alt="Leeks">
+
+            <div class="product-info">
+
+                <h2>Leeks</h2>
+
+                <p>
+                    Mild flavorful leeks perfect for soups,
+                    stews, and savory meals.
+                </p>
+
+                <div class="price">$4.70 / kg</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TUMBLEWEEDS -->
+
+        <div class="product-card">
+
+            <img src="tumbleweed-o.webp" alt="Tumbleweeds">
+
+            <div class="product-info">
+
+                <h2>Tumbleweeds</h2>
+
+                <p>
+                    Extremely authentic western desert decor.
+                    Probably not edible. Probably.
+                </p>
+
+                <div class="price">$12.99 each</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- APPLES -->
+
+        <div class="product-card">
+
+            <img src="Apples-184940975-770x533-1_jpg.webp" alt="Apples">
+
+            <div class="product-info">
+
+                <h2>Apples</h2>
+
+                <p>
+                    Crisp juicy apples available in sweet
+                    and tart varieties.
+                </p>
+
+                <div class="price">$3.10 / kg</div>
+
+                <button class="buy-btn">
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 VeggieMart. Freshness guaranteed.
+    </footer>
+
+</body>
+
+</html>

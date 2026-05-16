@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: white;
+        }
+
+        .quiz-container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .quiz-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .question h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #8ec5ff;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 12px 0;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        input[type="radio"] {
+            accent-color: #4da3ff;
+            transform: scale(1.2);
+        }
+
+        label {
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #4da3ff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2f86e6;
+            transform: scale(1.02);
+        }
+
+        .results {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            display: none;
+            text-align: center;
+        }
+
+        .results h2 {
+            margin-bottom: 10px;
+            color: #8ec5ff;
+        }
+
+        .score {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .quiz-title {
+                font-size: 30px;
+            }
+
+            .question h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <h1 class="quiz-title">Random Knowledge Quiz</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h2>What is love?</h2>
+
+            <div class="option">
+                <input type="radio" name="love" value="wrong" id="affection">
+                <label for="affection">Affection</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="love" value="wrong" id="social_contract">
+                <label for="social_contract">Social Contract</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="love" value="correct" id="baby">
+                <label for="baby">Baby don't hurt me, don't hurt me, no more</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h2>Capital of Syria</h2>
+
+            <div class="option">
+                <input type="radio" name="syria" value="wrong" id="laos">
+                <label for="laos">Laos</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="syria" value="wrong" id="puerto_rico">
+                <label for="puerto_rico">Puerto Rico</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="syria" value="correct" id="dont_know_syria">
+                <label for="dont_know_syria">I don't know that</label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h2>What is the state of matter of iron at 20000 Kelvin?</h2>
+
+            <div class="option">
+                <input type="radio" name="iron" value="wrong" id="liquid">
+                <label for="liquid">Liquid</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="iron" value="wrong" id="gas">
+                <label for="gas">Gas</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="iron" value="correct" id="plasma">
+                <label for="plasma">Plasma</label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h2>How do taxes work?</h2>
+
+            <div class="option">
+                <input type="radio" name="taxes" value="wrong" id="they_tax">
+                <label for="they_tax">They tax</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="taxes" value="wrong" id="dont_know_taxes">
+                <label for="dont_know_taxes">I don't know</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" name="taxes" value="correct" id="no_taxes">
+                <label for="no_taxes">I don't pay taxes</label>
+            </div>
+        </div>
+
+        <button class="submit-btn" onclick="checkResults()">
+            Submit Quiz
+        </button>
+
+        <div class="results" id="results">
+            <h2>Your Result</h2>
+            <p class="score" id="scoreText"></p>
+        </div>
+
+    </div>
+
+    <script>
+        function checkResults() {
+
+            let score = 0;
+            let total = 4;
+
+            const questions = ["love", "syria", "iron", "taxes"];
+
+            questions.forEach(question => {
+
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+
+                if (selected && selected.value === "correct") {
+                    score++;
+                }
+            });
+
+            const resultsDiv = document.getElementById("results");
+            const scoreText = document.getElementById("scoreText");
+
+            scoreText.innerHTML = `${score} / ${total}`;
+
+            if (score === total) {
+                scoreText.innerHTML += "<br>🔥 Perfect score!";
+            } else if (score >= 2) {
+                scoreText.innerHTML += "<br>👍 Pretty good!";
+            } else {
+                scoreText.innerHTML += "<br>💀 Bro studied from TikTok";
+            }
+
+            resultsDiv.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+<!--<!DOCTYPE html>
+
+<html>
+
+<head><title>Test</title></head>
+
+<body>
+    <h2>What is love?</h2><br>
+    <div style="display: flex;">
+        <input type="radio" name="love" id="affection">
+        <label for="affection">Affection</label>
+        <br>
+        <input type="radio" name="love" id="social contract">
+        <label for="social contract">Social Contract</label>
+        <br>
+        <input type="radio" name="love" id="baby">
+        <label for="baby">Baby don't hurt me, don't hurt me, no more</label>
+    </div>
+    
+    <h2>Capital of Syria</h2><br>
+    <div style="display: flex;">
+        <input type="radio" name="syria" id="laos">
+        <label for="laos">Laos</label>
+        <br>
+        <input type="radio" name="syria" id="puerto_rico">
+        <label for="puerto_rico">Puerto Rico</label>
+        <br>
+        <input type="radio" name="syria" id="dont_know_syria">
+        <label for="dont_know_syria">I don't know that</label>
+    </div>
+
+    
+    <h2>What is the state of matter of iron at 20000 degrees kelvin?</h2><br>
+    <div style="display: flex;">
+        <input type="radio" name="iron" id="liquid">
+        <label for="liquid">liquid</label>
+        <br>
+        <input type="radio" name="iron" id="gas">
+        <label for="gas">gas</label>
+        <br>
+        <input type="radio" name="iron" id="plasma">
+        <label for="plasma">plasma</label>
+    </div>
+
+    
+    <h2>How do taxes work?</h2><br>
+    <div style="display: flex;">
+        <input type="radio" name="taxes" id="they_tax">
+        <label for="they_tax">they tax</label>
+        <br>
+        <input type="radio" name="taxes" id="dont_know_taxes">
+        <label for="dont_know_taxes">i don't know</label>
+        <br>
+        <input type="radio" name="taxes" id="no_taxes">
+        <label for="no_taxes">I don't pay taxes</label>
+    </div>
+</body>
+
+</html>
+-->
