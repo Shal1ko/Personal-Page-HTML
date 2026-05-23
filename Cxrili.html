@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Timetable</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            color: white;
+        }
+
+        .table-container {
+            width: 100%;
+            max-width: 1100px;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            background: linear-gradient(90deg, #16a34a, #22c55e);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #15803d;
+            color: white;
+            padding: 16px;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 16px;
+            text-align: center;
+            color: #1e293b;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #e2e8f0;
+        }
+
+        td:hover {
+            background-color: #bbf7d0;
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+        }
+
+        @media (max-width: 768px) {
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="table-container">
+
+        <div class="title">
+            Weekly School Timetable
+        </div>
+
+        <table>
+
+            <!-- Row 1: Days -->
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+
+            <!-- Row 2: First Lesson -->
+            <tr>
+                <td>Math</td>
+                <td>Geography</td>
+                <td>Chemistry</td>
+                <td>Math</td>
+                <td>English</td>
+                <td>History</td>
+            </tr>
+
+            <!-- Row 3: Second Lesson -->
+            <tr>
+                <td>History</td>
+                <td>Math</td>
+                <td>Math</td>
+                <td>Geography</td>
+                <td>History</td>
+                <td>Field Work</td>
+            </tr>
+
+            <!-- Row 4: Third Lesson -->
+            <tr>
+                <td>Science Lab</td>
+                <td>Art</td>
+                <td>Social Studies</td>
+                <td>History</td>
+                <td>Chess</td>
+                <td>Engineering</td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
+
+<!-- =========================================================
+     ORIGINAL CODE (FOR COMPARISON PURPOSES)
+=========================================================
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <Title>table</Title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(9, 238, 104);
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <table>
+    
+  <!- Row 1: Days ->
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  
+  <!- Row 2: First Lesson ->
+  <tr>
+    <td>Math</td>
+    <td>Geography</td>
+    <td>Chemistry</td>
+    <td>Math</td>
+    <td>English</td>
+    <td>History</td>
+  </tr>
+  
+  <!- Row 3: Second Lesson ->
+  <tr>
+    <td>History</td>
+    <td>Math</td>
+    <td>Math</td>
+    <td>Geography</td>
+    <td>History</td>
+    <td>Field Work</td>
+  </tr>
+
+  <!- Row 4: Third Lesson ->
+   <tr>
+    <td>Meth Lab</td>
+    <td>Killing</td>
+    <td>Commie Studies</td>
+    <td>History</td>
+    <td>Chess</td>
+    <td>Nuclear Engrineering</td>
+   </tr>
+</table>
+</body>
+
+</html>
+
+========================================================= -->
