@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Travel Wishlist</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .page-title p {
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        .travel-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            gap: 35px;
+        }
+
+        .country-card {
+            background: white;
+            color: #1e293b;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease;
+        }
+
+        .country-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .country-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .country-content {
+            padding: 30px;
+        }
+
+        .country-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .country-title h2 {
+            font-size: 34px;
+        }
+
+        .badge {
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .description {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #475569;
+        }
+
+        .goals-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .goal-box {
+            background: #f8fafc;
+            border-left: 6px solid #2563eb;
+            padding: 20px;
+            border-radius: 14px;
+            transition: 0.3s ease;
+        }
+
+        .goal-box:hover {
+            background: #e0f2fe;
+            transform: scale(1.02);
+        }
+
+        .goal-box h3 {
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .goal-box ul {
+            margin-left: 18px;
+        }
+
+        .goal-box li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .page-title h1 {
+                font-size: 38px;
+            }
+
+            .country-image {
+                height: 220px;
+            }
+
+            .country-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .country-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <div class="page-title">
+        <h1>🌍 Dream Travel Wishlist</h1>
+        <p>Countries we want to explore and unforgettable goals to achieve</p>
+    </div>
+
+    <div class="travel-container">
+
+        <!-- Brazil Card -->
+        <div class="country-card">
+
+            <!-- IMAGE PLACEHOLDER -->
+            <img src="agustin-diaz-gargiulo-7F65HDP0-E0-unsplash-1620x1080-1.jpg" alt="Brazil Image" class="country-image">
+
+            <div class="country-content">
+
+                <div class="country-title">
+                    <h2>🇧🇷 Brazil</h2>
+                    <span class="badge">Top Adventure Pick</span>
+                </div>
+
+                <p class="description">
+                    Brazil is full of vibrant culture, tropical beaches,
+                    incredible wildlife, football passion, and world-famous
+                    festivals like Carnival.
+                </p>
+
+                <div class="goals-section">
+
+                    <div class="goal-box">
+                        <h3>🏖 Places to Visit</h3>
+
+                        <ul>
+                            <li>Rio de Janeiro</li>
+                            <li>Amazon Rainforest</li>
+                            <li>São Paulo</li>
+                            <li>Copacabana Beach</li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-box">
+                        <h3>🎯 Travel Goals</h3>
+
+                        <ul>
+                            <li>Watch a football match live</li>
+                            <li>Try Brazilian barbecue</li>
+                            <li>Ride a cable car over the city</li>
+                            <li>Experience Carnival celebrations</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mexico Card -->
+        <div class="country-card">
+
+            <!-- IMAGE PLACEHOLDER -->
+            <img src="metropolitan-cathedral-zocalo-mexico-city.avif" alt="Mexico Image" class="country-image">
+
+            <div class="country-content">
+
+                <div class="country-title">
+                    <h2>🇲🇽 Mexico</h2>
+                    <span class="badge">Culture & Food</span>
+                </div>
+
+                <p class="description">
+                    Mexico offers ancient history, colorful cities,
+                    breathtaking beaches, amazing food, and rich traditions
+                    celebrated throughout the country.
+                </p>
+
+                <div class="goals-section">
+
+                    <div class="goal-box">
+                        <h3>🏛 Places to Visit</h3>
+
+                        <ul>
+                            <li>Chichén Itzá</li>
+                            <li>Mexico City</li>
+                            <li>Cancún</li>
+                            <li>Tulum</li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-box">
+                        <h3>🎯 Travel Goals</h3>
+
+                        <ul>
+                            <li>Eat authentic street tacos</li>
+                            <li>Swim in cenotes</li>
+                            <li>Visit local markets</li>
+                            <li>See Día de los Muertos celebrations</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        ✈️ Future adventures start with a dream
+    </footer>
+
+</body>
+
+</html>

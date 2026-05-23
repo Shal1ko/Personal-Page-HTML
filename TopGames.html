@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Favorite Games</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #020617, #111827);
+            color: white;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 52px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .games-container {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background: white;
+            color: #111827;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+            transition: 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #dbeafe;
+        }
+
+        .game-content {
+            padding: 24px;
+        }
+
+        .game-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .game-title h2 {
+            font-size: 28px;
+        }
+
+        .rank {
+            background: #2563eb;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .description {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .game-info {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+        }
+
+        .game-info h3 {
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .game-info ul {
+            margin-left: 20px;
+        }
+
+        .game-info li {
+            margin-bottom: 8px;
+        }
+
+        .game-link {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .game-link:hover {
+            background: linear-gradient(90deg, #1d4ed8, #2563eb);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 38px;
+            }
+
+            .game-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🎮 Top 5 Favorite Games</h1>
+        <p>A collection of games that stand out through gameplay, style, and unforgettable experiences.</p>
+    </div>
+
+    <div class="games-container">
+
+        <!-- Warframe -->
+        <div class="game-card">
+
+            <!-- IMAGE PLACEHOLDER -->
+            <img src="warframe-metacard.png" alt="Warframe Image" class="game-image">
+
+            <div class="game-content">
+
+                <div class="game-title">
+                    <h2>Warframe</h2>
+                    <span class="rank">#1</span>
+                </div>
+
+                <p class="description">
+                    A fast-paced sci-fi action game with incredible movement,
+                    deep customization, and massive cooperative missions across space.
+                </p>
+
+                <div class="game-info">
+                    <h3>⭐ Favorite Features</h3>
+
+                    <ul>
+                        <li>Fluid parkour combat</li>
+                        <li>Huge variety of weapons</li>
+                        <li>Epic boss fights</li>
+                        <li>Beautiful futuristic worlds</li>
+                    </ul>
+                </div>
+
+                <!-- LINK PLACEHOLDER -->
+                <a href="https://www.warframe.com/en" class="game-link" target="_blank">
+                    Visit Game Page
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Shadow Fight 3 -->
+        <div class="game-card">
+
+            <img src="shadow-fight-3_banner.jpg" alt="Shadow Fight 3 Image" class="game-image">
+
+            <div class="game-content">
+
+                <div class="game-title">
+                    <h2>Shadow Fight 3</h2>
+                    <span class="rank">#2</span>
+                </div>
+
+                <p class="description">
+                    A stylish fighting game blending martial arts, weapons,
+                    and shadow abilities with cinematic battles and RPG progression.
+                </p>
+
+                <div class="game-info">
+                    <h3>⭐ Favorite Features</h3>
+
+                    <ul>
+                        <li>Unique combat styles</li>
+                        <li>Awesome weapon animations</li>
+                        <li>Story-driven gameplay</li>
+                        <li>Character customization</li>
+                    </ul>
+                </div>
+
+                <a href="https://play.google.com/store/apps/details?id=com.nekki.shadowfight3" class="game-link" target="_blank">
+                    Visit Game Page
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Wuthering Waves -->
+        <div class="game-card">
+
+            <img src="maxresdefault.jpg" alt="Wuthering Waves Image" class="game-image">
+
+            <div class="game-content">
+
+                <div class="game-title">
+                    <h2>Wuthering Waves</h2>
+                    <span class="rank">#3</span>
+                </div>
+
+                <p class="description">
+                    An open-world action RPG featuring fast combat,
+                    stunning visuals, emotional storytelling, and deep exploration.
+                </p>
+
+                <div class="game-info">
+                    <h3>⭐ Favorite Features</h3>
+
+                    <ul>
+                        <li>High-speed combat system</li>
+                        <li>Beautiful anime-style graphics</li>
+                        <li>Large open world</li>
+                        <li>Memorable soundtrack</li>
+                    </ul>
+                </div>
+
+                <a href="https://wutheringwaves.kurogames.com/en/main" class="game-link" target="_blank">
+                    Visit Game Page
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Shadow Fight 4 -->
+        <div class="game-card">
+
+            <img src="shadow-fight-4-arena-13pnj.png" alt="Shadow Fight 4 Arena Image" class="game-image">
+
+            <div class="game-content">
+
+                <div class="game-title">
+                    <h2>Shadow Fight 4: Arena</h2>
+                    <span class="rank">#4</span>
+                </div>
+
+                <p class="description">
+                    A competitive multiplayer fighting game where strategy,
+                    timing, and skill decide every intense battle.
+                </p>
+
+                <div class="game-info">
+                    <h3>⭐ Favorite Features</h3>
+
+                    <ul>
+                        <li>Online PvP battles</li>
+                        <li>Strategic gameplay</li>
+                        <li>Cool hero abilities</li>
+                        <li>Smooth animations</li>
+                    </ul>
+                </div>
+
+                <a href="https://play.google.com/store/apps/details?id=com.nekki.shadowfightarena&hl=en" class="game-link" target="_blank">
+                    Visit Game Page
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Minecraft -->
+        <div class="game-card">
+
+            <img src="536f3aa5-424d-487a-a90c-957f93b32c17.jpg" alt="Minecraft Image" class="game-image">
+
+            <div class="game-content">
+
+                <div class="game-title">
+                    <h2>Minecraft</h2>
+                    <span class="rank">#5</span>
+                </div>
+
+                <p class="description">
+                    The ultimate sandbox game where creativity,
+                    survival, and exploration combine into endless possibilities.
+                </p>
+
+                <div class="game-info">
+                    <h3>⭐ Favorite Features</h3>
+
+                    <ul>
+                        <li>Unlimited creativity</li>
+                        <li>Survival adventures</li>
+                        <li>Massive multiplayer servers</li>
+                        <li>Redstone engineering</li>
+                    </ul>
+                </div>
+
+                <a href="https://minecraft.net" class="game-link" target="_blank">
+                    Visit Game Page
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        🕹 Gaming is more than entertainment — it's an experience.
+    </footer>
+
+</body>
+
+</html>

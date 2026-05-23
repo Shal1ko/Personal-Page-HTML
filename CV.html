@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Doom - Curriculum Vitae</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #e5e7eb;
+        padding: 40px;
+        color: #111827;
+      }
+
+      .cv-container {
+        max-width: 1100px;
+        margin: auto;
+        background: white;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      /* LEFT PANEL */
+
+      .sidebar {
+        background: #0f172a;
+        color: white;
+        padding: 40px 30px;
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 16px;
+        border: 4px solid #334155;
+        margin-bottom: 25px;
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-bottom: 25px;
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border-radius: 16px;
+        border: 4px solid #334155;
+
+        transition: opacity 0.4s ease;
+      }
+
+      /* Default image visible */
+      .image1 {
+        opacity: 1;
+      }
+
+      /* Hover image hidden */
+      .image2 {
+        opacity: 0;
+      }
+
+      /* Swap on hover */
+      .image-container:hover .image1 {
+        opacity: 0;
+      }
+
+      .image-container:hover .image2 {
+        opacity: 1;
+      }
+
+      .name {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .role {
+        font-size: 18px;
+        color: #94a3b8;
+        margin-bottom: 30px;
+      }
+
+      .sidebar-section {
+        margin-bottom: 35px;
+      }
+
+      .sidebar-section h3 {
+        font-size: 18px;
+        margin-bottom: 14px;
+        color: #60a5fa;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 6px;
+      }
+
+      .sidebar-section p,
+      .sidebar-section li {
+        color: #d1d5db;
+        line-height: 1.7;
+        font-size: 15px;
+      }
+
+      .sidebar-section ul {
+        margin-left: 18px;
+      }
+
+      /* RIGHT PANEL */
+
+      .main-content {
+        padding: 50px;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+        color: #0f172a;
+        margin-bottom: 18px;
+        border-left: 6px solid #2563eb;
+        padding-left: 12px;
+      }
+
+      .summary {
+        line-height: 1.9;
+        color: #374151;
+        font-size: 16px;
+      }
+
+      .experience-item {
+        margin-bottom: 28px;
+      }
+
+      .experience-item h3 {
+        font-size: 22px;
+        color: #111827;
+        margin-bottom: 6px;
+      }
+
+      .experience-item span {
+        color: #6b7280;
+        font-size: 15px;
+      }
+
+      .experience-item p {
+        margin-top: 12px;
+        line-height: 1.8;
+        color: #374151;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .skill {
+        background: #dbeafe;
+        color: #1d4ed8;
+        padding: 10px 16px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .contact-info p {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .cv-container {
+          grid-template-columns: 1fr;
+        }
+
+        .main-content {
+          padding: 35px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cv-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- IMAGE PLACEHOLDER -->
+        <div class="image-container">
+          <!-- Default Image -->
+          <img
+            src="ImgPerson.png"
+            alt="Victor Doom Normal"
+            class="profile-image image1"
+          />
+
+          <!-- Hover Image -->
+          <img
+            src="Doctor-Doom-with-energy-fist.jpg"
+            alt="Victor Doom Hover"
+            class="profile-image image2"
+          />
+        </div>
+
+        <h1 class="name">Victor Doom</h1>
+        <p class="role">Leader of Latveria</p>
+
+        <!-- Contact -->
+        <div class="sidebar-section">
+          <h3>Contact</h3>
+
+          <div class="contact-info">
+            <p>Email: victor.doom@latveria.gov</p>
+            <p>Location: Doomstadt, Latveria</p>
+            <p>Office: Royal Palace of Latveria</p>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="sidebar-section">
+          <h3>Core Skills</h3>
+
+          <ul>
+            <li>Political Leadership</li>
+            <li>Advanced Engineering</li>
+            <li>Scientific Research</li>
+            <li>Strategic Planning</li>
+            <li>Diplomatic Relations</li>
+            <li>Technological Innovation</li>
+          </ul>
+        </div>
+
+        <!-- Languages -->
+        <div class="sidebar-section">
+          <h3>Languages</h3>
+
+          <ul>
+            <li>English</li>
+            <li>Latverian</li>
+            <li>German</li>
+            <li>Russian</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- Professional Summary -->
+        <section class="section">
+          <h2>Professional Summary</h2>
+
+          <p class="summary">
+            Highly accomplished national leader, scientist, and engineer with
+            extensive experience in governance, technological innovation, and
+            international diplomacy. Recognized for advancing scientific
+            research initiatives and modernizing national infrastructure while
+            maintaining strong strategic leadership capabilities.
+          </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+          <h2>Professional Experience</h2>
+
+          <div class="experience-item">
+            <h3>Supreme Leader of Latveria</h3>
+            <span>Government of Latveria | Present</span>
+
+            <p>
+              Oversees national administration, economic planning, scientific
+              development programs, and foreign relations. Directed multiple
+              modernization initiatives involving infrastructure, defense
+              systems, and advanced research facilities.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Independent Scientific Researcher</h3>
+            <span>Private Research Division</span>
+
+            <p>
+              Conducted advanced studies in robotics, energy systems,
+              theoretical physics, and applied engineering. Developed innovative
+              technologies focused on efficiency, automation, and national
+              defense applications.
+            </p>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+          <h2>Education</h2>
+
+          <div class="experience-item">
+            <h3>Massachusetts Institute of Technology (MIT)</h3>
+            <span>Advanced Engineering & Applied Sciences</span>
+
+            <p>
+              Specialized in advanced engineering concepts, experimental
+              technologies, and scientific research methodologies with a focus
+              on innovation and practical implementation.
+            </p>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+          <h2>Technical Expertise</h2>
+
+          <div class="skills">
+            <div class="skill">Artificial Intelligence</div>
+            <div class="skill">Robotics</div>
+            <div class="skill">Cybernetics</div>
+            <div class="skill">Energy Systems</div>
+            <div class="skill">Mechanical Engineering</div>
+            <div class="skill">Government Strategy</div>
+            <div class="skill">Defense Technologies</div>
+            <div class="skill">Advanced Computing</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
