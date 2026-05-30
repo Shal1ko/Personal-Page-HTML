@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sound Clash</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-image: url("240602-concert-fans-stock-vl-1023a-9b4766.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a1b9a;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .description {
+            text-align: center;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .event-details {
+            background-color: #f4f4f4;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .event-details p {
+            margin: 10px 0;
+            font-size: 1.05rem;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background-color: #6a1b9a;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #4a148c;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🎵 Summer Sound Clash 2026</h1>
+
+        <p class="description">
+            Join talented performers from across the country for an unforgettable
+            night of music, energy, and competition. Whether you're a solo artist,
+            part of a duet, or performing with a full band, this is your chance
+            to shine on stage.
+        </p>
+
+        <div class="event-details">
+            <p><strong>📍 Location:</strong> City Arena, Tbilisi</p>
+            <p><strong>📅 Date:</strong> July 15, 2026</p>
+            <p><strong>⏰ Time:</strong> 18:00</p>
+        </div>
+
+        <h2>Registration Form</h2>
+
+        <form>
+            <div>
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="age">Age</label>
+                <input
+                    type="number"
+                    id="age"
+                    min="1"
+                    placeholder="Enter your age"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="category">Performance Type</label>
+                <select id="category" required>
+                    <option value="">Select an option</option>
+                    <option>Solo</option>
+                    <option>Duet</option>
+                    <option>Band</option>
+                </select>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

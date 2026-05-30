@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        padding: 40px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s;
+      }
+
+      .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .image-placeholder {
+        height: 200px;
+        background-color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card-content h2 {
+        margin-bottom: 10px;
+        color: #222;
+        font-size: 1.2rem;
+      }
+
+      .card-content p {
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .category {
+        font-style: italic;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="card">
+        <img
+          src="crop_CARR1923_Carrot___Sweetness_Pelleted_Long.webp"
+          alt="Carrot"
+        />
+        <div class="card-content">
+          <h2>Carrots</h2>
+          <p>Some nice lookng carrots</p>
+          <div class="category">Vegetable</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ImgPerson.png" alt="Man" />
+        <div class="card-content">
+          <h2>A Man</h2>
+          <p>An average man</p>
+          <div class="category">People</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Apples-184940975-770x533-1_jpg.webp" alt="Apple" />
+        <div class="card-content">
+          <h2>Apples</h2>
+          <p>Very nice looking apples</p>
+          <div class="category">Fruit</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Patates.jpg" alt="Potato" />
+        <div class="card-content">
+          <h2>Potatos</h2>
+          <p>Potatos</p>
+          <div class="category">Vegetable</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="agustin-diaz-gargiulo-7F65HDP0-E0-unsplash-1620x1080-1.jpg" alt="Seaside" />
+        <div class="card-content">
+          <h2>Seaside City</h2>
+          <p>A beautiful city coastline</p>
+          <div class="category">Location</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="21b1da743dc45974de36d04c021fd8eee1276091cdd1e0e2387cd6d193a8ec3f.webp" alt="pepper" />
+        <div class="card-content">
+          <h2>Peppers</h2>
+          <p>Peppers</p>
+          <div class="category">Fruit</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="tumbleweed-o.webp" alt="tulmbeweed" />
+        <div class="card-content">
+          <h2>Tumbleweed</h2>
+          <p>This town ain't big enough for the both of us</p>
+          <div class="category">Confrontation</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Doctor-Doom-with-energy-fist.jpg" alt="Doctor Doom" />
+        <div class="card-content">
+          <h2>Doctor Victor Von Doom</h2>
+          <p>Ruler of Latveria</p>
+          <div class="category">People</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Leek_on_white_background_-_0947.jpg" alt="leak" />
+        <div class="card-content">
+          <h2>Leek</h2>
+          <p>Leek</p>
+          <div class="category">Leek</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="maxresdefault.jpg" alt="WuWa" />
+        <div class="card-content">
+          <h2>Wuthering Waves</h2>
+          <p>Aemeath</p>
+          <div class="category">Games</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
